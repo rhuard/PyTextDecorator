@@ -4,6 +4,8 @@
 Python Text Decorator. Uses the ANSI escape characters to allow python code to
 print different styles and colors to the console screen
 
+build off ideas found here :http://cwoebker.com/posts/ansi-escape-codes
+
 ## usage:
 ```python
 T=TextDecorator()
