@@ -1,5 +1,4 @@
-# PyTextDecorator
-cautious-spork
+# PyTextDecorator (cautious-spork)
 
 
 Python Text Decorator. Uses the ANSI escape characters to allow python code to
