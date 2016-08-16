@@ -1,1 +1,1 @@
-from PyTextDecorator.pytextdecorator import TextDecorator
+from PyTextDecorator.pytextdecorator import *
