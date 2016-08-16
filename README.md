@@ -6,6 +6,11 @@ print different styles and colors to the console screen
 
 build off ideas found here: http://cwoebker.com/posts/ansi-escape-codes
 
+## import
+```python
+from PyTextDecorator import *
+```
+
 ## usage:
 ```python
 T=TextDecorator()
