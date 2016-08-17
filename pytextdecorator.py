@@ -4,7 +4,7 @@ ESCAPE = '\033[%sm'
 ENDC = ESCAPE % '0'
 
 
-TEXT_STYLE = {
+_TEXT_STYLE = {
     'bold' : '1',
     'faint' : '2',
     'underline' : '4',
@@ -13,7 +13,7 @@ TEXT_STYLE = {
     'strikethrough' : '9',
 }
 
-COLORS = {
+_COLORS = {
     'black': '30',
     'red': '31',
     'green': '32',
@@ -24,7 +24,7 @@ COLORS = {
     'white': '37',
 }
 
-BACKGROUND_COLORS = {
+_BACKGROUND_COLORS = {
     'black' : '40',
     "red" : '41',
     'green': '42',
@@ -38,23 +38,23 @@ BACKGROUND_COLORS = {
 def _ExpandStyle(style):
     s = ""
     for i in range(len(style)):
-        s += TEXT_STYLE[style[i]] + ";"
+        s += _TEXT_STYLE[style[i]] + ";"
         return s[:-1]
 
 def _MakeTwoColorText(color, bcolor, msg):
-    t = COLORS[color] + ";" + self.BACKGROUND_COLORS[bcolor]
+    t = _COLORS[color] + ";" + self.BACKGROUND_COLORS[bcolor]
     return _Decorate(t, msg)
 
 def _MakeColorStyleText(color, style, msg):
-    t = COLORS[color] + ";" + self._ExpandStyle(style)
+    t = _COLORS[color] + ";" + self._ExpandStyle(style)
     return _Decorate(t, msg)
 
 def _MakeBColorStyleText(bcolor, style, msg):
-    t = BACKGROUND_COLORS[bcolor] + ";" + self._ExpandStyle(style)
+    t = _BACKGROUND_COLORS[bcolor] + ";" + self._ExpandStyle(style)
     return _Decorate(t, msg)
 
 def _MakeFancyText(color, bcolor, style, msg):
-    s = _ExpandStyle(style) + ";" + self.COLORS[color] + ";" + self.BACKGROUND_COLORS[bcolor]
+    s = _ExpandStyle(style) + ";" + self._COLORS[color] + ";" + self.BACKGROUND_COLORS[bcolor]
     return _Decorate(s, msg)
 
 def _MakeStyleText(style, msg):
@@ -62,11 +62,11 @@ def _MakeStyleText(style, msg):
     return _Decorate(s, msg)
 
 def _MakeBackColorText(color, msg):
-    c = BACKGROUND_COLORS[color]
+    c = _BACKGROUND_COLORS[color]
     return _Decorate(c, msg)
 
 def _MakeColorText(color, msg):
-    c = COLORS[color]
+    c = _COLORS[color]
     return _Decorate(c, msg)
 
 def _Decorate(fmt, msg):
