@@ -1,5 +1,6 @@
 # PyTextDecorator (cautious-spork)
 
+[![Build Status](https://travis-ci.org/rhuard/PyTextDecorator.svg?branch=master)](https://travis-ci.org/rhuard/PyTextDecorator)
 
 Python Text Decorator. Uses the ANSI escape characters to allow python code to
 print different styles and colors to the console screen
