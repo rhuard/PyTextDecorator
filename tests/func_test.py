@@ -1,4 +1,4 @@
-from pytextdecorator import *
+from PyTextDecorator.pytextdecorator import *
 
 def test_color_black():
     s = DecorateText("test", color='black')
