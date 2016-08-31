@@ -76,7 +76,6 @@ def _Decorate(fmt, msg):
 def DecorateText(msg="", **kwargs):
     if('color' in kwargs) and ('bcolor' in kwargs) and ('style' in kwargs):
         t = _MakeFancyText(kwargs['color'], kwargs['bcolor'], kwargs['style'], msg)
-
     elif('color' in kwargs) and ('bcolor' in kwargs):
         t = _MakeTwoColorText(kwargs['color'], kwargs['bcolor'], msg)
     elif('color' in kwargs) and ('style' in kwargs):
